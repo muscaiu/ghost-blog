@@ -4,7 +4,7 @@ var path = require('path'),
 
 config = {
     production: {
-        url: 'http://127.0.0.1:2368',
+        url: 'http://54.171.95.112:2368',
         mail: {},
         database: {
             client: 'sqlite3',
@@ -15,7 +15,7 @@ config = {
         },
 
         server: {
-            host: '127.0.0.1',
+            host: '0.0.0.0',
             port: '2368'
         }
     },
@@ -30,7 +30,7 @@ config = {
         },
         server: {
             host: '127.0.0.1',
-           port: '2368'
+            port: '2368'
         },
         paths: {
             contentPath: path.join(__dirname, '/content/')
