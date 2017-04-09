@@ -1,5 +1,4 @@
-<article itemscope itemtype="http://schema.org/BlogPosting"
-  role="article" class="post-item {{post_class}}">
+<article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post-item {{post_class}}">
   <header class="post-item-header">
     <h2 itemprop="name" class="post-item-title">
       <a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">
@@ -8,22 +7,25 @@
     </h2>
   </header>
   <section itemprop="description" class="post-item-excerpt">
-    <p><img src={{image}} />{{excerpt words="20"}}&hellip;</p>
+    <p>
+      <img src={{image}} />
+      </br>
+      {{excerpt words="20"}} &hellip;
+    </p>
   </section>
   <footer class="post-item-footer">
     <ul class="post-item-meta-list">
       <li class="post-item-meta-item">
-        <time datetime="{{date published_at format="YYYY-MM-DD"}}" itemprop="datePublished">
+        <time datetime="{{date published_at format=" YYYY-MM-DD "}}" itemprop="datePublished">
           {{date published_at timeago="true"}}
         </time>
       </li>
       {{#if tags}}
-        <li class="post-item-meta-item">
-          {{#foreach tags}}
-            <a itemprop="{{#if @first}}articleSection{{else}}keywords{{/if}}" href="{{url}}" data-pjax>{{name}}</a>
-            {{~#if @last}} {{else}}, {{/if}}
-          {{/foreach}}
-        </li>
+      <li class="post-item-meta-item">
+        {{#foreach tags}}
+        <a itemprop="{{#if @first}}articleSection{{else}}keywords{{/if}}" href="{{url}}" data-pjax>{{name}}</a> {{~#if @last}}
+        {{else}}, {{/if}} {{/foreach}}
+      </li>
       {{/if}}
       <li class="post-item-meta-item">
         <a href="{{url}}#disqus_thread" data-pjax data-disqus-identifier="{{id}}">Comments</a>
