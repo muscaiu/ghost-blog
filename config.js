@@ -4,7 +4,7 @@
 
     config = {
         production: {
-            url: 'http://34.252.166.141:2368',
+            url: 'http://174.138.8.153:2368',
             mail: {},
             database: {
                 client: 'sqlite3',
