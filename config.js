@@ -3,7 +3,7 @@ var path = require("path"),
 
 config = {
   production: {
-    url: "http://127.0.0.1",
+    url: "http://127.0.0.1:80",
     mail: {},
     database: {
       client: "sqlite3",
